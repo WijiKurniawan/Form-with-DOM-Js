@@ -40,7 +40,16 @@
 </div>
  
 <script>
-  // masukkan kodemu di sini
+  const submitAction = document.getElementById('formatDataDiri');
+  submitAction.addEventListener('submit',function (event) {
+    const inputNama = document.getElementById('inputNama').value;
+    const inputDomisili = document.getElementById('inputDomisili').value;
+    const hiddenMessage = 'Halo' + inputNama + ', bagaimana cuaca nya di' + inputDomisili + '?';
+
+    document.getElementById('messageAfterSubmit').innerText = hiddenMessage;
+    event.preventDefault();//mencegah browser melakukan refersh 
+  })
+  
 </script>
 </body>
 </html>
